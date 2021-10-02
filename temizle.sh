@@ -12,10 +12,10 @@ read -e -p $'SEÇİM EDİN : ' secim
 
 ## ŞƏRTLƏR ##
 
-if [[ $secim == 1]];then
+if [[ $secim == 1 ]];then
 	clear
 	exit
-elif [[ $secim2== 2 ]];then
+elif [[ $secim == 2 ]];then
  	 ifconfig
  	 exit
 else
