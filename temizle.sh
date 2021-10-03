@@ -1,23 +1,23 @@
-# Linux sistemlərində ekranı təmizləməyinizə və ip adresinizi öyrənməyinizə yarayacaq kodlama.
-# Author - @nakhidz
+# author - @nakhidz
+#!/bin/bash
 
-# EKRANA YAZDIRMA ###
 printf "
 
-[1] EKRANI TEMIZLE
-[2] IFCONFIG
+[1] İP ADRESİNİ ÖYRƏN
+[2] EKRANI TƏMİZLƏ
 "
-# istifadəçi girdisi ##
-read -e -p $'SEÇİM EDİN : ' secim
+read -e -p $'SECIM EDIN : ' secim
 
-## ŞƏRTLƏR ##
+# EMRLER
 
-if [[ $secim == 1 ]];then
+
+if [[ $secim == 1]]; then
+	ifconfig
+	 exit
+
+elif [[ $secim == 2]]; then
 	clear
 	exit
-elif [[ $secim == 2 ]];then
- 	 ifconfig
- 	 exit
 else
-	 printf " XƏTALI SEÇİM "
+   printf " XƏTALI SEÇİM "
 fi
